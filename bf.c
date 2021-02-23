@@ -5,23 +5,28 @@
 #define MEM_LENGTH 3000
 #define STACK_LEN 5000
 
+// prints the first 10 values of memory strip
 void print10(unsigned char memory[MEM_LENGTH]){
     for(int i = 0; i < 10; i++){
         printf("%hhu\t", memory[i]);
     }
     printf("\n");
 }
+// prints first 20 values of stack
 void printS(unsigned stack[STACK_LEN]){
     for(int i = 0; i < 20; i++){
         printf("%u ", stack[i]);
     }
     printf("\n");
 }
+// initialises memory
 void initMem(unsigned char memory[MEM_LENGTH]){
     for(int i = 0; i < MEM_LENGTH; i++){
         memory[i] = 0;
     }
 }
+// the folowing 4 functions(initStack, push, read, removeS) implement basic stack operations
+// although it cant contain value 0, because 0 is used as an indicator that tells us that the cell is empty
 void initStack(unsigned stack[STACK_LEN]){
     for(int i = 0; i < STACK_LEN; i++){
         stack[i] = 0;
